@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Maeztra</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="fecharPopup()">FECHAR</span>
+        <div class="img-popup">
+          <img
+            src="./imagens/bg-newsletter.jpg"
+            alt="Banner de modelo amarrando o tênis" />
+        </div>
+        <div class="txt-popup">
+          <img src="./imagens/icons/email.png" alt="" width="28" height="30" />
+          <p class="bem-vindo">BEM VINDO À MAEZTRA</p>
+          <p class="txt-promo">
+            Receba em Primeira mão <br />
+            <b>descontos e ofertas exclusivas</b>
+          </p>
+          <form class="form-email" id="formInscricao">
+            <label for="email"></label>
+            <input
+              class="email-promo"
+              type="email"
+              id="email"
+              placeholder="Digite seu e-mail"
+              name="email" /> <br>
+            <button
+              class="button-promo"
+              type="button"
+              onclick="enviarInscricao()">
+              ENVIAR
+              <img
+                src="./imagens/icons/enviar.png"
+                alt=""
+                width="15"
+                height="20" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        mostrarPopup();
+      });
+      function mostrarPopup() {
+        document.getElementById("popup").style.display = "flex";
+      }
+      function fecharPopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+      function enviarInscricao() {
+        var email = document.getElementById("email").value;
+        console.log("Email enviado: " + email);
+        fecharPopup();
+      }
+      window.onclick = function (event) {
+        var popup = document.getElementById("popup");
+        if (event.target == popup) {
+          fecharPopup();
+        }
+      };
+    </script>
+
+    <p class="frase-promocao">
+      Acompanhe as melhores promoções disponíveis aqui na Maeztra.
+    </p>
+    <div class="header">
+      
+      <div class="cabecalho2">
+        <ul>
+          <li><img width="32" src="./imagens/icons/drawer.png" alt=""></li>
+          <li><img src="./imagens/logo-maeztra.png" alt=""></li>
+          <li>
+            <img width="28" src="./imagens/icons/search-button.png" alt="">
+            <li>
+              <img width="20" src="./imagens/icons/icon-shoppingbag.png" alt="">
+            </li>
+          </li>
+        </ul>
+      </div>
+
+      <div class="img-logo">
+        <img src="./imagens/logo-maeztra.png" alt="Logo Maeztra" />
+      </div>
+
+      <div class="barra-pesquisa">
+        <input type="text" placeholder="O Que Você Busca?" />
+        <button class="button-busca" type="submit">Buscar</button>
+      </div>
+
+      <div class="icones-link">
+        <a class="login" href="#">
+          <img src="./imagens/icons/icon-user.png" alt="" /> Login</a
+        >
+        <a class="conta" href="#"
+          ><img src="./imagens/icons/icon-heart.png" alt="" />Minha Conta</a
+        >
+        <a class="carrinho" href="#"
+          ><img src="./imagens/icons/icon-shoppingbag.png" alt="" />Meu
+          Carrinho</a
+        >
+      </div>
+    </div>
+
+    <nav class="menu">
+      <ul>
+        <li>
+          <a class="novidade" href="#"
+            ><img src="./imagens/icons/icon-dress.png" alt="" />Novidades</a
+          >
+        </li>
+        <li><a href="#">Vestidos</a></li>
+        <li><a href="#">Roupas</a></li>
+        <li><a href="#">Sapatos</a></li>
+        <li><a href="#">Lingerie</a></li>
+        <li><a href="#">Acessórios</a></li>
+        <li><a href="#">OUTLET</a></li>
+      </ul>
+    </nav>
+
+    <div class="banner-carrossel">
+      <input type="radio" id="carrossel1" name="ball-carrossel" checked />
+      <input type="radio" id="carrossel2" name="ball-carrossel" />
+      <input type="radio" id="carrossel3" name="ball-carrossel" />
+
+      <div class="carrossel">
+        <div class="slide-slide1">
+          <img src="./imagens/banner-modelo.png" alt="Imagem 1" />
+        </div>
+        <div class="slide-slide1">
+          <img src="./imagens/banner-modelo.png" alt="Imagem 2" />
+        </div>
+        <div class="slide-slide1">
+          <img src="./imagens/banner-modelo.png" alt="Imagem 3" />
+        </div>
+      </div>
+
+      <div class="carrossel-mobile">
+        <div class="slide-s1">
+          <img src="./imagens/banner-modelo-mob.png" alt="Imagem 1" />
+        </div>
+        <div class="slide-s1">
+          <img src="./imagens/banner-modelo-mob.png" alt="Imagem 2" />
+        </div>
+        <div class="slide-s1">
+          <img src="./imagens/banner-modelo-mob.png" alt="Imagem 3" />
+        </div>
+      </div>
+
+      <div class="text-banner">
+        <h1>Promoções de Outono</h1>
+        <p>
+          Confiras os melhores looks para combinar <br />
+          com você nesse Outono
+        </p>
+        <button>Conferir</button>
+      </div>
+
+      <div class="nav">
+        <label class="nav1" for="nav1"></label>
+        <label for="nav2"></label>
+        <label for="nav3"></label>
+        <label for="nav4"></label>
+        <label for="nav5"></label>
+      </div>
+
+      <label class="prev" for="nav1">&#10094;</label>
+      <label class="next" for="nav1">&#10095;</label>
+    </div>
+
+    <p class="pq-comprar">Por que comprar na Maestra?</p>
+
+    <div class="tipbar">
+      <img
+        class="tipbar2"
+        src="./imagens/tipbar/Tipbar01.png"
+        alt="Produtos Importados" />
+      <img
+        class="tipbar2"
+        src="./imagens/tipbar/Tipbar02.png"
+        alt="Estoque no Brasil" />
+      <img
+        class="tipbar2"
+        src="./imagens/tipbar/Tipbar03.png"
+        alt="Trocas Garantidas" />
+      <img
+        class="tipbar2"
+        src="./imagens/tipbar/Tipbar04.png"
+        alt="Ganhe 5% OFF" />
+      <img
+        class="tipbar1"
+        src="./imagens/tipbar/Tipbar05.png"
+        alt="Frete Grátis" />
+    </div>
+
+    <p class="txt-marcas-parceiras">Marcas Parceiras</p>
+    <div class="marcas-parceiras">
+      <img
+        class="marcas-parceiras1"
+        src="./imagens/marcas/marcaComma.png"
+        alt="Comma" />
+      <img
+        class="marcas-parceiras1"
+        src="./imagens/marcas/marcaMelissa.png"
+        alt="Melissa" />
+      <img
+        class="marcas-parceiras2"
+        src="./imagens/marcas/marcaForever21.png"
+        alt="Forever21" />
+      <img
+        class="marcas-parceiras1"
+        src="./imagens/marcas/marcaZara.png"
+        alt="Zara" />
+      <img
+        class="marcas-parceiras1"
+        src="./imagens/marcas/marcaAnnTaylor.png"
+        alt="Ann Taylor" />
+    </div>
+
+    <p class="txt-pedidas">As Mais Pedidas</p>
+    <div class="mais-pedidas">
+      <div class="produtos-pedidos">
+        <img src="./imagens/produtos/Produto01.png" alt="Imagem 1" />
+        <div class="cor-produto">
+          <div class="corMarrom"></div>
+          <div class="corRosa"></div>
+          <div class="corAzul"></div>
+          <div class="corMarinho"></div>
+        </div>
+        <div class="sobre-produto">
+          <p class="preco-prod">R$ 500,00</p>
+          <p class="nome-prod">Faux Suede Mini Skirt</p>
+          <p class="descricao-prod">
+            A faux suede mini skirt featuring exposed <br />
+            button-front closures and panel seam <br />
+            construction.
+          </p>
+          <button class="adicionar-btn">Adicionar</button>
+        </div>
+      </div>
+      <div class="slide-slide2">
+        <img src="./imagens/produtos/Produto02.png" alt="Imagem 2" />
+        <div class="cor-produto">
+          <div class="corPreto"></div>
+          <div class="corVermelho"></div>
+          <div class="corBege"></div>
+          <div class="corBranco"></div>
+        </div>
+        <div class="sobre-produto">
+          <p class="preco-prod">R$ 320,00</p>
+          <p class="nome-prod">Ruched Rose Print Mini Skirt</p>
+          <p class="descricao-prod">
+            A satin mini skirt featuring an allover floral print, <br />
+            ruched side with self-tie closure, concealed back <br />
+            zipper, and a flounce hem.
+          </p>  <button class="adicionar-btn">Adicionar</button>
+        </div>
+      </div>
+      <div class="produtos-pedidos2">
+        <img src="./imagens/produtos/Produto01.png" alt="Imagem 1" />
+        <div class="cor-produto">
+          <div class="corMarrom"></div>
+          <div class="corRosa"></div>
+          <div class="corAzul"></div>
+          <div class="corMarinho"></div>
+        </div>
+        <div class="sobre-produto">
+          <p class="preco-prod">R$ 500,00</p>
+          <p class="nome-prod">Faux Suede Mini Skirt</p>
+          <p class="descricao-prod">
+            A faux suede mini skirt featuring exposed <br />
+            button-front closures and panel seam <br />
+            construction.
+          </p>  <button class="adicionar-btn">Adicionar</button>
+        </div>
+      </div>
+      <div class="slide-slide2">
+        <img src="./imagens/produtos/Produto02.png" alt="Imagem 2" />
+        <div class="cor-produto">
+          <div class="corPreto"></div>
+          <div class="corVermelho"></div>
+          <div class="corBege"></div>
+          <div class="corBranco"></div>
+        </div>
+        <div class="sobre-produto">
+          <p class="preco-prod">R$ 320,00</p>
+          <p class="nome-prod">Ruched Rose Print Mini Skirt</p>
+          <p class="descricao-prod">
+            A satin mini skirt featuring an allover floral print, <br />
+            ruched side with self-tie closure, concealed back <br />
+            zipper, and a flounce hem.
+          </p>  <button class="adicionar-btn">Adicionar</button>
+        </div>
+      </div>
+      <div class="produtos-pedidos3">
+        <img src="./imagens/produtos/Produto01.png" alt="Imagem 1" />
+        <div class="cor-produto">
+          <div class="corMarrom"></div>
+          <div class="corRosa"></div>
+          <div class="corAzul"></div>
+          <div class="corMarinho"></div>
+        </div>
+        <div class="sobre-produto">
+          <p class="preco-prod">R$ 500,00</p>
+          <p class="nome-prod">Faux Suede Mini Skirt</p>
+          <p class="descricao-prod">
+            A faux suede mini skirt featuring exposed <br />
+            button-front closures and panel seam <br />
+            construction.
+          </p>  <button class="adicionar-btn">Adicionar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="nova-colecao">
+      <div class="txt-colecao">
+        <h1>Lorem ipsum</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum mauris posuere fusce proin mattis. Hendrerit cras ut nunc enim dictum. Mattis proin ut quis donec sed eget nulla. Vel mi ut mauris integer. Nibh sagittis in lobortis sed cursus condimentum velit pharetra. Amet luctus ut vulputate scelerisque .
+        </p>
+      </div>
+      <img
+        src="./imagens/Banner-modelo2.png"
+        alt="Banner com Modelo de Roupa Amarela e cabelo Azul segurando uma bolsa" />
+    </div>
+
+    <div class="newsletter">
+      <p>Recebe Nossa Newsletter</p>
+      <div class="form-news">
+      <input type="text" placeholder="Digite seu e-mail" />
+      <button class="button-enviar" type="submit">Enviar</button>
+    </div></div>
+
+    <footer class="footer">
+      <div class="infos">
+        <h2>Informações</h2>
+        <ul>
+          <li><a href="#">Quem Somos</a></li>
+          <li><a href="#">Prazo de Envio</a></li>
+          <li><a href="#">Trocas e Devoluções</a></li>
+          <li><a href="#">Promoções e Cupons</a></li>
+        </ul>
+      </div>
+
+      <div class="conta">
+        <h2>Minha Conta</h2>
+        <ul>
+          <li><a href="#">Minha Conta</a></li>
+          <li><a href="#">Meus Pedidos</a></li>
+          <li><a href="#">Cadastre-se</a></li>
+        </ul>
+      </div>
+
+      <div class="local">
+        <h2>Onde nos Encontrar</h2>
+        <ul>
+          <li><a href="#">Lojas</a></li>
+          <li><a href="#">Endereços</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <footer class="footer-mobile">
+        <div>
+          <h2>Informações +</h2>
+        </div>
+  
+        <div>
+          <h2>Minha Conta +</h2>
+          
+        </div>
+  
+        <div>
+          <h2>Onde nos Encontrar +</h2>
+      </footer>
+
+    <div class="maisInfos">
+      <div class="redesSociais">
+        <img src="./imagens/footer/facebook.png" alt="Facebook" />
+        <img src="./imagens/footer/linkedin.png" alt="LinkedIn" />
+        <img src="./imagens/footer/instagram.png" alt="Instagram" />
+        <img src="./imagens/footer/youtube.png" alt="YouTube" />
+      </div>
+      <div class="cartoes">
+        <img src="./imagens/footer/visa.png" alt="VISA" />
+        <img src="./imagens/footer/mastercard.png" alt="MASTERCARD" />
+        <img src="./imagens/footer/visa.png" alt="VISA" />
+        <img src="./imagens/footer/mastercard.png" alt="MASTERCARD" />
+      </div>
+      <div class="by">
+        <img src="./imagens/footer/vtex.png" alt="VTEX" />
+        <img src="./imagens/footer/maeztra.png" alt="MAEZTRA" />
+      </div>
+    </div>
+  </body>
+</html>
